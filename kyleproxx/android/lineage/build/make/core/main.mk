@@ -1194,3 +1194,4 @@ ndk: $(SOONG_OUT_DIR)/ndk.timestamp
 .PHONY: ndk
 
 endif # KATI
+)
