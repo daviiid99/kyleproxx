@@ -160,7 +160,10 @@ endif
 $(info You asked for an OpenJDK based build but your version is)
  $(info $(java_version_str).)
  $(info ************************************************************)
-#$(error stop)
+ #$(error stop)
+ endif # java version is not OpenJdk
+ #else # if requires_openjdk
+ ifneq ($(shell echo '$(java_version_str)' | grep -i openjdk),)
  
 
 # -----------------------------------------------------------------
