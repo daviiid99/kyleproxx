@@ -255,6 +255,8 @@ strings.Join(armCpuVariantCflags["cortex-a9"], " "))
 		strings.Join(armClangCpuVariantCflags["cortex-a7"], " "))
 	pctx.StaticVariable("ArmClangCortexA8Cflags",
 		strings.Join(armClangCpuVariantCflags["cortex-a8"], " "))
+	 pctx.StaticVariable("ArmClangCortexA9Cflags",
+		strings.Join(armClangCpuVariantCflags["cortex-a9"], " "))
 	pctx.StaticVariable("ArmClangCortexA15Cflags",
 		strings.Join(armClangCpuVariantCflags["cortex-a15"], " "))
 	pctx.StaticVariable("ArmClangCortexA53Cflags",
