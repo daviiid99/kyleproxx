@@ -160,7 +160,7 @@ endif
 $(info You asked for an OpenJDK based build but your version is)
  $(info $(java_version_str).)
  $(info ************************************************************)
-$(error stop)
+#$(error stop)
  
 
 # -----------------------------------------------------------------
