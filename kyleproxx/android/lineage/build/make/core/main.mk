@@ -165,7 +165,6 @@ $(info You asked for an OpenJDK based build but your version is)
  else # if requires_openjdk
  ifneq ($(shell echo '$(java_version_str)' | grep -i openjdk),)
 
-
 # -----------------------------------------------------------------
 # Variable to check java support level inside PDK build.
 # Not necessary if the components is not in PDK.
@@ -1194,4 +1193,3 @@ ndk: $(SOONG_OUT_DIR)/ndk.timestamp
 .PHONY: ndk
 
 endif # KATI
-)
