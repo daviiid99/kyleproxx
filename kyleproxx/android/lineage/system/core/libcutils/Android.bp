@@ -56,7 +56,6 @@ cc_library {
     },
     host_supported: true,
     srcs: [
-        "atomic.c",
         "config_utils.c",
         "fs_config.cpp",
         "canned_fs_config.c",
