@@ -618,7 +618,7 @@ void getNativePixelFormat(EGLDisplay dpy, egl_connection_t* cnx, EGLConfig confi
 
 
 #ifdef WORKAROUND_BUG_10194508
-       if (!cnx->egl.eglGetConfigAttrib(iDpy, config, EGL_NATIVE_VISUAL_ID,
+       if (!cnx->egl.eglGetConfigAttrib(dpy, config, EGL_NATIVE_VISUAL_ID,
                &format)) {
             ALOGE("eglGetConfigAttrib(EGL_NATIVE_VISUAL_ID) failed: %#x",
                     eglGetError());
