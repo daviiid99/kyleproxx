@@ -162,8 +162,8 @@ $(info You asked for an OpenJDK based build but your version is)
  $(info ************************************************************)
 #$(error stop)
  endif # java version is not OpenJdk
- else # if requires_openjdk
- ifneq ($(shell echo '$(java_version_str)' | grep -i openjdk),)
+ #else # if requires_openjdk
+ #ifneq ($(shell echo '$(java_version_str)' | grep -i openjdk),)
 
 # -----------------------------------------------------------------
 # Variable to check java support level inside PDK build.
@@ -1192,4 +1192,4 @@ tidy_only:
 ndk: $(SOONG_OUT_DIR)/ndk.timestamp
 .PHONY: ndk
 
-endif # KATI
+#endif # KATI
