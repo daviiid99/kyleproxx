@@ -1,0 +1,10 @@
+/boot           emmc    /dev/block/platform/sdhci.1/by-name/KERNEL
+/boot           emmc   /dev/block/platform/sdhci.1/by-name/boot                        flags=display="Boot image";backup=1;flashimg=1;
+/system         ext4    /dev/block/platform/sdhci.1/by-name/system                        flags=display="System image";backup=1;wipeingui;flashimg=1;
+/cache          ext4    /dev/block/platform/sdhci.1/by-name/CSC                           flags=display="cache image";backup=1;flashimg=1;
+/data           ext4    /dev/block/platform/sdhci.1/by-name/userdata                        length=-16384
+/cache          ext4    /dev/block/platform/sdhci.1/by-name/CSC
+/recovery       emmc    /dev/block/platform/sdhci.1/by-name/RECOVERY
+/modem          emmc    /dev/block/platform/sdhci.1/by-name/modem                           flags=display="Baseband";backup=1
+/efs            ext4    /dev/block/platform/sdhci.1/by-name/efs                             flags=display="EFS";backup=1
+/external_sd    vfat    /dev/block/mmcblk1p1                            /dev/block/mmcblk1  flags=display="Micro SDcard";storage;wipeingui;removable
