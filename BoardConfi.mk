@@ -52,11 +52,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 TARGET_KERNEL_CONFIG                    := bcm21664_hawaii_ss_kylepro_rev00_cyanogenmod_defconfig
 TARGET_KERNEL_SOURCE                        := kernel/samsung/kyleproxx
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
-ifeq($(HOST_OS), darwin)
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7/bin
-else
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin
-endif
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
 # Platform
