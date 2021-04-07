@@ -50,13 +50,9 @@ BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-ifeq ($(BUILD_TWRP),true)
-    TARGET_KERNEL_CONFIG                    := bcm21664_hawaii_ss_kyleproxx_rev00_recovery_defconfig
-else
-    TARGET_KERNEL_CONFIG                    := bcm21664_hawaii_ss_kylepro_rev00_cyanogenmod_defconfig
-endif
+TARGET_KERNEL_CONFIG                    := bcm21664_hawaii_ss_kylepro_rev00_cyanogenmod_defconfig
 TARGET_KERNEL_SOURCE                        := kernel/samsung/kyleproxx
-TARGET_KERNEL_CUSTOM_TOOLCHAIN              := arm-eabi-4.7
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 # Platform
 TARGET_BOARD_PLATFORM := hawaii
