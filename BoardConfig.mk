@@ -42,8 +42,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Kernel
-TARGET_KERNEL_CONFIG := bcm21664_hawaii_ss_kyleproxx_rev00_recovery_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/kyleproxx
+
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x82000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -51,6 +50,14 @@ BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+ifeq ($(BUILD_TWRP),true)
+    TARGET_KERNEL_CONFIG                    := bcm21664_hawaii_ss_kyleproxx_rev00_recovery_defconfig
+else
+    TARGET_KERNEL_CONFIG                    := bcm21664_hawaii_ss_kylepro_rev00_cyanogenmod_defconfig
+endif
+TARGET_KERNEL_SOURCE                        := kernel/samsung/kyleproxx
+TARGET_KERNEL_CUSTOM_TOOLCHAIN              := arm-eabi-4.7
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 # Platform
 TARGET_BOARD_PLATFORM := hawaii
